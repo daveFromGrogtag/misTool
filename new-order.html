@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" type="module" defer></script>
+</head>
+
+<body >
+    <header>
+        <h1>Print-a-majig</h1>
+        <nav>
+            <ul>
+                <li><a href="/"><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+                <li><a href=""><i class="fa fa-file-text" aria-hidden="true"></i>Orders</a></li>
+                <li><a href=""><i class="fa fa-shapes" aria-hidden="true"></i>Products</a></li>
+                <li><a href=""><i class="fa fa-users" aria-hidden="true"></i>Customers</a></li>
+                <li><a href=""><i class="fa fa-line-chart" aria-hidden="true"></i>Reports</a></li>
+                <li><a href=""><i class="fa fa-scroll" aria-hidden="true"></i>Substrates</a></li>
+                <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i>Settings</a></li>
+            </ul>
+            <hr>
+            <a href=""><i class="fa fa-user" aria-hidden="true"></i>Sign In</a>
+        </nav>
+    </header>
+    <main>
+        <h1>New Order</h1>
+        <section id="order-info-section">
+            <div>
+                <label for="reference-1">Reference 1</label>
+                <input type="text" name="reference-1">
+            </div>
+            <div>
+                <label for="reference-2">Reference 2</label>
+                <input type="text" name="reference-2">
+            </div>
+            <div>
+                <label for="client">Client</label>
+                <input list="client-list" type="text" name="reference-2">
+                <button>Add New Client</button>
+                <datalist id="client-list">
+                    <option value="Chocolate"></option>
+                    <option value="Coconut"></option>
+                    <option value="Mint"></option>
+                    <option value="Strawberry"></option>
+                    <option value="Vanilla"></option>
+                </datalist>
+            </div>
+            <div>
+                <div>
+                    <label for="attn">Attention</label>
+                    <input type="text" id="attn" name="attn" placeholder="Attention.." required>
+                </div>
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Address.." required>
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="City.." required>
+                </div>
+                <div>
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="State.." required>
+                </div>
+                <div>
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" placeholder="Zip code.." required>
+                </div>
+                <div>
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select country..</option>
+                        <option value="USA">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="due-date">Due Date</label>
+                <input type="date" name="due-date" id="due-date">
+            </div>
+            <div>
+                <label for="notes">Notes</label>
+                <textarea name="notes" id="notes"></textarea>
+            </div>
+            <ul id="item-section">
+    
+            </ul>
+            <button id="show-add-item-button">Add Item +</button>
+        </section>
+        <section id="add-item-section" class="hidden">
+            <section class="add-item-modal">
+                <div>
+                    <label for="item-product">Product</label>
+                    <input type="text" name="item-product" id="item-product">
+                </div>
+                <div>
+                    <label for="item-press">Press</label>
+                    <select type="text" name="item-press" id="item-press">
+                        <option value="canon-colorado-production">CANON Colorado Production</option>
+                        <option value="canon-arizona-production">CANON Arizona Production</option>
+                        <option value="canon-colorado-quality">CANON Colorado Quality</option>
+                        <option value="canon-arizona-quality">CANON Arizona Quality</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="item-substrate">Substrate</label>
+                    <select type="text" name="item-substrate" id="item-substrate">
+                        <option value="vinyl">Standard Self Adhesive Vinyl</option>
+                        <option value="holo-vinyl">Holographic Self Adhesive Vinyl</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="item-laminate">Laminate</label>
+                    <select type="text" name="item-laminate" id="item-laminate">
+                        <option value="none">None</option>
+                        <option value="soft-touch">Soft Touch</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="item-width">Width</label>
+                    <input type="number" name="item-width" id="item-width" value="0">
+                </div>
+                <div>
+                    <label for="item-height">Height</label>
+                    <input type="number" name="item-height" id="item-height" value="0">
+                </div>
+                <div>
+                    <label for="item-bleed">Bleed</label>
+                    <input type="number" name="item-bleed" id="item-bleed" value="0">
+                </div>
+                <div>
+                    <label for="item-price">Price Per Unit</label>
+                    <input type="text" name="item-price" id="item-price">
+                </div>
+                <div>
+                    <label for="item-quantity">Quantity</label>
+                    <input type="number" name="item-quantity" id="item-quantity" value="0">
+                </div>
+                <button id="add-item">Add Item</button><button id="add-item-cancel">Cancel</button>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
