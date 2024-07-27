@@ -89,3 +89,48 @@ input, select {
 .hidden {
     display: none !important;
 }
+
+/* General table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Table header styling */
+th {
+    background-color: darkslategrey;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table cell styling */
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Table row styling for alternating colors */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Table row styling for hover effect */
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Optional: Add a border to the table */
+table {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden; /* Ensures that the border-radius works */
+}
+
+/* Optional: Add a shadow to the table for a bit of depth */
+table {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

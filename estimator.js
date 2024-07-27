@@ -1,9 +1,9 @@
 const substrateList = {
     "vinyl": {
-        "costPerSqareInch": 1.5
+        "costPerSqareInch": 0.00565843621399177
     },
     "holo-vinyl": {
-        "costPerSqareInch": 1.5
+        "costPerSqareInch": 0.00665843621399177
     }
 }
 
@@ -38,9 +38,9 @@ function estimator(width, height, bleed, quantity, substrate, laminate, press, d
     console.log(heightBleed);
     let squareInches = (widthBleed * heightBleed * parseInt(quantity))
     let materialCost = getMaterialCost(substrate, laminate, press) * squareInches
-    console.log(`SI: ${squareInches}`);
-    console.log(`MC: ${materialCost}`);
-    return {'materialCost': materialCost, 'squareInches': squareInches}
+    let laborCost = 0
+    let totalCost = materialCost + laborCost
+    return {'materialCost': materialCost, 'squareInches': squareInches, 'laborCost': laborCost, 'totalCost': totalCost}
 }
 
 function getMaterialCost(substrate, laminate, press) {
